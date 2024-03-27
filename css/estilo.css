@@ -111,3 +111,39 @@ nav h2 a:focus,
     right: 0;
     background-color: var(--cor-clara);
 }
+
+/* 
+1) Crie uma regra CSS para formatar o destaque com as seguintes configurações: 
+
+- Altura 500px
+- imagem de fundo (fundo-destaque)
+-imagem de fundo parada
+- flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, use o modo coluna)
+
+2) Crie uma regra CSS para formatar o h2 e o p contidos em Destaques. Faça com que os textos fiquem centralizados (text-align) e com cor clara.
+*/
+.destaque {
+    height: 500px;
+    background-image: url(../imagens/fundo-destaque.jpg);/*imagem de fundo*/
+    background-attachment: fixed;/*fundo fixo*/
+    display: flex;
+    flex-direction: column;
+    /* color: var(--cor-clara); */
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+
+    /*deixa a letra maiuscula*/
+    /* font-weight: 500px; */
+    /* font-size: 1.5rem;
+    
+    background-size: 800px;
+    /*tamanho*/
+    /* padding: 100px; */
+}
+
+.destaque h2,
+.destaque p {
+    color: var(--cor-clara);
+    text-align: center;
+}
