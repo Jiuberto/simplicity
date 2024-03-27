@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 :root {
     --cor-titulo: #4d4d4d;
@@ -10,34 +12,46 @@
     --cor-intermediaria: #ececec;
 }
 
-html{
+html {
     font-size: 16px;
 }
 
-body{
+body {
     color: var(--cor-texto);
     font-family: 'Noto Sans', sans-serif;
     background-color: var(--cor-clara);
 }
 
-body, h1,h2,p, figure, nav ul {
+body,
+h1,
+h2,
+p,
+figure,
+nav ul {
     margin: 0;
     padding: 0;
 }
 
-img {max-width: 100%}/*imagem responsiva*/
+img {
+    max-width: 100%
+}
 
-a {text-decoration: none;}
+/*imagem responsiva*/
+
+a {
+    text-decoration: none;
+}
 
 h1 {
     font-family: Raleway, sans-serif;
-    text-transform: uppercase;/*deixa a letra maiuscula*/
+    text-transform: uppercase;
+    /*deixa a letra maiuscula*/
     font-weight: 800;
     font-size: 1.5rem;
 
 }
 
-h1 a{
+h1 a {
     background-color: var(--cor-escura);
     color: var(--cor-clara);
     padding: 0.3rem 1rem;
@@ -58,12 +72,18 @@ nav h2 a {
     display: inline-block;
 }
 
-nav h2 a:hover, nav h2 a:focus, .links-menu a:hover ,.links-menu a:focus {
+nav h2 a:hover,
+nav h2 a:focus,
+.links-menu a:hover,
+.links-menu a:focus {
     background-color: var(--cor-intermediaria);
 }
 
 .links-menu {
     list-style: none;
+
+    /* Atenção: neste ponto, fazemos com que os links do menu iniciem escondidos(display:none). Posteriormente, com ajuda do CSS combinado com JS, faremos os controles para exibir/esconder de forma alternada. */
+    display: none;
 }
 
 .links-menu a {
@@ -72,7 +92,22 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover ,.links-menu a:focus {
     font-weight: bold;
     display: flex;
     height: 50px;
-    background-color: aqua;
-    justify-content: center;/*alinhar na horizontal*/
-    align-items: center;/*alinhar na vertical*/
+    justify-content: center;
+    /*alinhar na horizontal*/
+    align-items: center;
+    /*alinhar na vertical*/
+}
+
+/* Regra que será aplicada somente quando o menu for acionado para abertura */
+.links-menu.aberto {
+    display: flex;
+
+    /* Fazemos com que eles fiquem um em cima do outro (flex coluna) */
+    flex-direction: column;
+
+    /* ativamos position:absolute e ajustamos a posição final dos links suando propriedades de coordenadas */
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-clara);
 }
