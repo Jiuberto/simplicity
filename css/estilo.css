@@ -59,6 +59,7 @@ h1 a {
 }
 
 header {
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,14 +124,18 @@ nav h2 a:focus,
 2) Crie uma regra CSS para formatar o h2 e o p contidos em Destaques. Faça com que os textos fiquem centralizados (text-align) e com cor clara.
 */
 .destaque {
+    height: 88vh;
     height: 500px;
-    background-image: url(../imagens/fundo-destaque.jpg);/*imagem de fundo*/
-    background-attachment: fixed;/*fundo fixo*/
+    background-image: url(../imagens/fundo-destaque.jpg);
+    /*imagem de fundo*/
+    background-attachment: fixed;
+    /*fundo fixo*/
     display: flex;
     flex-direction: column;
     /* color: var(--cor-clara); */
     justify-content: center;
     align-items: center;
+
     /* text-align: center; */
 
     /*deixa a letra maiuscula*/
@@ -142,8 +147,42 @@ nav h2 a:focus,
     /* padding: 100px; */
 }
 
-.destaque h2,
-.destaque p {
+.destaque h2, .destaque p {
     color: var(--cor-clara);
     text-align: center;
+
+    /* aplicação de animação */
+    animation-name: animaDestaque;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+}
+
+/*Clamp()
+Função para o redirecionamento de textos responsivo de acordo com certo critérios.
+
+clamp(
+    tamanhoMinimo,
+    tamanhoMédio,
+    tamanhoMaximo
+)
+*/
+.destaque h2 {
+    font-size: clamp(3rem, 10vw, 7rem);
+}
+
+.destaque p {}
+
+/* Regra de animação */
+@keyframes animaDestaque {
+
+    /* De onde vem(partida) */
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    /* para onde vai(destino) */
+    to {
+        opacity: 1;
+    }
 }
