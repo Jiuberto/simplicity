@@ -33,7 +33,7 @@ nav ul {
 }
 
 img {
-    max-width: 100%
+    max-width: 100%;
 }
 
 /*imagem responsiva*/
@@ -186,3 +186,61 @@ clamp(
         opacity: 1;
     }
 }
+
+article h2{
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: Relaway, sans-serif;
+    color: var(--cor-titulo);
+}
+
+.front-end, .historia, .localizacao {
+    text-align: center;
+}
+
+article p {
+    padding: 0.5rem 0;
+}
+
+address {
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.historia{
+    background-image: url(../imagens/fundo-madeira.jpg) ;
+    background-attachment: fixed;
+}
+
+.historia h2{
+    color: var(--cor-clara);
+        text-shadow: black 5px 5px 10px;
+
+}
+
+.historia iframe{
+    width: 100%;
+    max-width: 700px;/*limite maximo de largura*/
+    margin-bottom: 2rem;
+}
+
+.localizacao iframe{
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.limitador{
+    width: 95vw;
+    margin: auto;
+}
+ footer{
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    /*alinhar na horizontal*/
+    align-items: center;
+    text-align: center;
+ }
