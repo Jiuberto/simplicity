@@ -244,3 +244,18 @@ address {
     align-items: center;
     text-align: center;
  }
+
+ /* Refras para as paginas: produtos, serviços e contato */
+
+ .conteudo {
+    background-color: var(--cor-intermediaria);
+    padding: 0.5rem;
+    border-radius: 8px;
+ }
+
+ .conteudo h2 {
+    padding-left: 0;
+    font-size: 1.8rem;
+    border-bottom: solid 1px;
+    margin-bottom: 1rem;
+ }
