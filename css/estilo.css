@@ -320,6 +320,22 @@ td:last-child::before {
     content: "R$ ";
 }
 
+/* imagem serviços */
+.imgs{text-align: center;}
+
+.imgs img {
+    border-radius: 50%;
+    transform: scale(0.8);
+    filter: brightness(120%) blur(2px);
+    transition: 0.5s;
+}
+
+.imgs img:hover {
+    transform:(1) ;
+    filter: none;
+    border-radius: 10%;
+}
+
 @media screen and (min-width: 570px) {
     nav h2 {
         display:none
@@ -352,4 +368,6 @@ img{
     html{font-size: 18px;}
     .limitador{max-width: 1000px;}
 }
+
+
 
