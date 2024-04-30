@@ -1,7 +1,7 @@
 'use strict'
 
 //selecionando o elemento que acionara a lista de links menu
-const botaoMenu = document.querySelector('nav h2');
+const botaoMenu = document.querySelector('nav h2 a');
 
 //selencionando a lista de links/menu
 
@@ -14,5 +14,13 @@ botaoMenu.addEventListener('click', function (event) {
     event.preventDefault()
     
     listaDeLinks.classList.toggle('aberto')
-})
+
+    if (listaDeLinks.classList.contains('aberto')) {
+        botaoMenu.innerHTML = 'Fecha &times;';
+    } else {
+        botaoMenu.innerHTML = 'Menu &equiv;'
+    }
+});
+
+
 

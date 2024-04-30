@@ -72,6 +72,14 @@ header{
     z-index: 100;
 }
 
+
+nav h2 a:hover,
+nav h2 a:focus,
+.links-menu a:hover,
+.links-menu a:focus {
+    background-color: var(--cor-intermediaria);
+}
+
 nav h2 a {
     color: var(--cor-escura);
     font-size: 1.2rem;
@@ -80,12 +88,6 @@ nav h2 a {
     display: inline-block;
 }
 
-nav h2 a:hover,
-nav h2 a:focus,
-.links-menu a:hover,
-.links-menu a:focus {
-    background-color: var(--cor-intermediaria);
-}
 
 .links-menu {
     list-style: none;
