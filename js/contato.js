@@ -9,3 +9,8 @@ const campoCidade = document.querySelector('#cidade')
 const campoEstado = document.querySelector('#estado')
 const botaoBuscar = document.querySelector('buscar')
 const mensagem = document.querySelector('#status')
+
+//detectar quando o botao de buscar cep é acionado
+botaoBuscar.addEventListener('click', function name(event) {
+    event.preventDefault()
+})
