@@ -339,6 +339,54 @@ td:last-child::before {
     border-radius: 10%;
 }
 
+/* Estilos para formatar formulario */
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, select, textarea {
+    border: none;
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+textarea {height: auto;}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 30%;
+/*     text-align: center;
+ */}
+
+/* seleciona exceções para não serem afetadas */
+form div *:not(label) {width: 70%;}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    box-shadow: var(--cor-escura) 0 0 2px;
+}
+
 @media screen and (min-width: 570px) {
     nav h2 {
         display:none
