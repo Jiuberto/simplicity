@@ -17,7 +17,7 @@ botaoBuscar.addEventListener('click', async function (event) {
     /* verificar se o cep não tem 8 digitos */
     if (campoCep.value.length !== 8) {
         mensagemStatus.textContent = 'Digite um CEP válido'
-        mensagemStatus.Style.color = 'purple'
+        mensagemStatus.style.color = 'purple'
 
         return
     } else {
