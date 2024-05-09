@@ -7,15 +7,20 @@ const campoEndereco = document.querySelector('#endereco')
 const campoBairro = document.querySelector('#bairro')
 const campoCidade = document.querySelector('#cidade')
 const campoEstado = document.querySelector('#estado')
+const campoTelefone = document.querySelector('#telefone')
 const botaoBuscar = document.querySelector('#buscar')
 const mensagemStatus = document.querySelector('#status')
+
+/* seleção dos campos (via Jquery) e astivação das máscaras(via Jquery Mask) */
+$(campoCep).mask("00000-000")           //01234-567
+$(campoTelefone).mask("(00) 0000-0000")      //(11) 2134-0300
 
 //detectar quando o botao de buscar cep é acionado
 botaoBuscar.addEventListener('click', async function (event) {
     event.preventDefault()
     let cepInformado
     /* verificar se o cep não tem 8 digitos */
-    if (campoCep.value.length !== 8) {
+    if (campoCep.value.length !== 9) {
         mensagemStatus.textContent = 'Digite um CEP válido'
         mensagemStatus.style.color = 'purple'
 
