@@ -92,13 +92,18 @@ botaoBuscar.addEventListener('click', async function (event) {
           response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {
               status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+              status.innerHTML = "Obrigado"
+              status.style.color = "blue"
+              formulario.reset()
             } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
+              status.innerHTML = "Oops! deu erro"
+              status.style.color = "red"
             }
           })
         }
       }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
+        status.innerHTML = "Oops! deu erro"
+        status.style.color = "red"
       });
     }
     formulario.addEventListener("submit", handleSubmit)
